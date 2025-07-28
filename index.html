@@ -11,12 +11,10 @@
             font-family: 'Inter', sans-serif;
             background-color: #f0f4f8;
             color: #333;
-            /* Added subtle background pattern */
             background-image: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23cbd5e0" fill-opacity="0.2" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20V40zm40 0V20L20 40H40zm0-40L0 40V20L20 0H40zM0 0L40 40V20L20 0H0z"/%3E%3C/g%3E%3C/svg%3E');
             background-repeat: repeat;
         }
         .hero-section {
-            /* Enhanced gradient for more depth */
             background: linear-gradient(135deg, #002244 0%, #004488 100%);
             color: white;
             padding: 6rem 1rem;
@@ -79,6 +77,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            justify-content: space-between;
         }
         .card:hover {
             transform: translateY(-5px);
@@ -158,19 +157,28 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+        /* Lead form card gradient */
+        #lead-form .card {
+            background: linear-gradient(145deg, #ffffff 0%, #e6f0ff 100%);
+            border: 1px solid #cce0ff;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        /* Improved form input styling */
         input[type="text"], input[type="email"], input[type="tel"], textarea {
             width: 100%;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border: 1px solid #cbd5e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
+            border: 2px solid #d1d5db;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            background-color: #f9fafb;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
         input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
             outline: none;
             border-color: #3399CC;
-            box-shadow: 0 0 0 3px rgba(51, 153, 204, 0.3);
+            box-shadow: 0 0 0 4px rgba(51, 153, 204, 0.4);
+            background-color: #ffffff;
         }
         .benefit-icon {
             font-size: 3rem;
@@ -201,7 +209,7 @@
             gap: 2rem;
             padding: 2rem 0;
             justify-items: center;
-            align-items: start;
+            align-items: stretch;
         }
         .service-item {
             background-color: rgba(255, 255, 255, 0.2);
@@ -214,8 +222,9 @@
             max-width: 350px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            height: 100%;
         }
         .service-item:hover {
             background-color: rgba(255, 255, 255, 0.35);
@@ -258,7 +267,7 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             justify-items: center;
-            align-items: start;
+            align-items: stretch; /* Ensures cards stretch to same height */
         }
         .contact-item {
             display: flex;
@@ -266,6 +275,11 @@
             align-items: center;
             text-align: center;
             padding: 1rem;
+            min-height: 180px; /* Set a minimum height for consistency */
+            justify-content: space-evenly; /* Distributes content vertically */
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         .image-section-content {
             display: grid;
@@ -274,12 +288,21 @@
             align-items: center;
             padding: 2rem 0;
         }
-        @media (min-width: 768px) { /* On medium screens and up */
+        @media (min-width: 768px) {
             .image-section-content {
-                grid-template-columns: 1fr 1fr; /* Two columns */
+                grid-template-columns: 1fr 1fr;
             }
-            .image-section-content.reverse-order {
-                grid-template-columns: 1fr 1fr; /* Ensure consistent grid for reverse */
+            .image-section-content .text-content {
+                order: 0; /* Default order */
+            }
+            .image-section-content .image-wrapper {
+                order: 0; /* Default order */
+            }
+            .image-section-content.reverse-order .text-content {
+                order: 2; /* Text on right */
+            }
+            .image-section-content.reverse-order .image-wrapper {
+                order: 1; /* Image on left */
             }
         }
         .image-section-content .text-content {
@@ -287,18 +310,144 @@
         }
         .image-section-content .image-wrapper {
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Ensures image corners are rounded */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
         }
         .image-section-content .image-wrapper:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
         }
         .image-section-content img {
             width: 100%;
-            height: 300px; /* Make images taller for impact */
-            object-fit: cover;
+            height: 300px;
+            object-fit: contain;
+            padding: 10px;
+        }
+        /* New highlight for "All Payment After VISA" */
+        .visa-payment-highlight {
+            background-color: #d1fae5;
+            color: #065f46;
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            display: inline-block;
+            margin-top: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Success Message Modal */
+        .success-modal {
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .success-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .success-modal-content {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            color: #065f46;
+            transform: translateY(-50px);
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+        }
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .success-modal-content h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .success-modal-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .success-modal-content button {
+            background-color: #065f46;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .success-modal-content button:hover {
+            background-color: #047857;
         }
     </style>
 </head>
@@ -321,6 +470,7 @@
             <span class="font-bold text-yellow-200 text-2xl">Study + Work: Opportunities for Students Across Asia!</span>
         </p>
         <a href="#lead-form" class="btn-primary">Limited Seats! Book Your Free Call Today!</a>
+        <div class="visa-payment-highlight">All Payment After VISA!</div>
     </header>
 
     <!-- About Section -->
@@ -363,7 +513,7 @@
     <section class="py-16 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-12">Why Study in China?</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
                 <div class="card">
                     <span class="benefit-icon">🎓</span>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">World-Class Education</h3>
@@ -444,7 +594,7 @@
     <section class="py-16 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-12">Program & Living Costs</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
                 <div class="card">
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">বার্ষিক টিউশন ও আবাসন</h3>
                     <p class="text-3xl font-bold text-indigo-600 mb-2">¥10,000 RMB/বছর</p>
@@ -512,7 +662,7 @@
                 Our All-Inclusive Service Package For Bangladeshi Students
                 <span class="absolute left-1/2 bottom-[-10px] transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></span>
             </h2>
-            <div class="service-package-grid">
+            <div class="service-package-grid lg:grid-cols-3">
                 <div class="service-item">
                     <span class="feature-icon">📝</span>
                     <p>Complete Application Processing</p>
@@ -544,7 +694,7 @@
     <!-- New Image Sections (Advertising Posters) -->
     <section class="py-16 px-4 bg-gray-100">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-12">Explore More</h2>
+            <h2 class="section-title mb-12"></h2> <!-- Section title left empty as requested -->
             <div class="image-section-content mb-12">
                 <div class="text-content text-left">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Practical Training Environment</h3>
@@ -552,8 +702,8 @@
                         আমাদের প্রোগ্রামের একটি মূল অংশ হলো হাতে-কলমে প্রশিক্ষণ। অত্যাধুনিক ল্যাব এবং কর্মশালায় আপনি সরাসরি ইন্ডাস্ট্রির পরিবেশে কাজ করার সুযোগ পাবেন, যা আপনাকে ভবিষ্যতের জন্য প্রস্তুত করবে।
                     </p>
                 </div>
-                <div class="image-wrapper">
-                    <img src="https://i.ibb.co/TMPZTwQD/2751753724344-pic.jpg" alt="বিজ্ঞাপন পোস্টার: ব্যবহারিক প্রশিক্ষণের পরিবেশ">
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/FL5X6whZ/5.png')">
+                    <img src="https://i.ibb.co/FL5X6whZ/5.png" alt="বিজ্ঞাপন পোস্টার: ব্যবহারিক প্রশিক্ষণের পরিবেশ">
                 </div>
             </div>
 
@@ -564,20 +714,53 @@
                         পড়াশোনার পাশাপাশি একটি প্রাণবন্ত ক্যাম্পাস জীবন আপনার জন্য অপেক্ষা করছে। আন্তর্জাতিক শিক্ষার্থীদের সাথে মেলামেশা, সাংস্কৃতিক অনুষ্ঠান এবং বিভিন্ন কার্যক্রমে অংশ নিয়ে আপনার অভিজ্ঞতাকে আরও সমৃদ্ধ করুন।
                     </p>
                 </div>
-                <div class="image-wrapper md:order-1">
-                    <img src="https://i.ibb.co/rfqywLHc/2741753724335-pic.jpg" alt="বিজ্ঞাপন পোস্টার: ডাইনামিক ক্যাম্পাস লাইফ">
+                <div class="image-wrapper md:order-1" onclick="openModal('https://i.ibb.co/M5JLMXbb/6.png')">
+                    <img src="https://i.ibb.co/M5JLMXbb/6.png" alt="বিজ্ঞাপন পোস্টার: ডাইনামিক ক্যাম্পাস লাইফ">
                 </div>
             </div>
 
-            <div class="image-section-content">
+            <div class="image-section-content mb-12">
                 <div class="text-content text-left">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Modern Facilities for Learning</h3>
                     <p class="text-lg text-gray-700 leading-relaxed">
                         আমাদের স্কুলে রয়েছে আধুনিক সুযোগ-সুবিধা সম্পন্ন ক্লাসরুম এবং উন্নত প্রযুক্তির ল্যাব। এখানে আপনি সেরা পরিবেশে শিখতে পারবেন এবং আপনার দক্ষতা বৃদ্ধি করতে পারবেন।
                     </p>
                 </div>
-                <div class="image-wrapper">
-                    <img src="https://i.ibb.co/8LV35ftb/2731753724333-pic.jpg" alt="বিজ্ঞাপন পোস্টার: আধুনিক শেখার সুবিধা">
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/6cC5G4Mn/7.png')">
+                    <img src="https://i.ibb.co/6cC5G4Mn/7.png" alt="বিজ্ঞাপন পোস্টার: আধুনিক শেখার সুবিধা">
+                </div>
+            </div>
+             <div class="image-section-content reverse-order mb-12">
+                <div class="text-content text-left md:order-2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Career Opportunities Await</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        আমাদের প্রোগ্রাম আপনাকে শুধুমাত্র শিক্ষা দেয় না, বরং উজ্জ্বল ভবিষ্যতের জন্য প্রস্তুত করে। ডিপ্লোমা শেষে চাইনিজ ও আন্তর্জাতিক কোম্পানিতে চাকরির সুযোগ আপনার হাতের মুঠোয়।
+                    </p>
+                </div>
+                <div class="image-wrapper md:order-1" onclick="openModal('https://i.ibb.co/fByZ4Gv/8.png')">
+                    <img src="https://i.ibb.co/fByZ4Gv/8.png" alt="বিজ্ঞাপন পোস্টার: ক্যারিয়ারের সুযোগ">
+                </div>
+            </div>
+            <div class="image-section-content mb-12">
+                <div class="text-content text-left">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Global Exposure</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        চীনের বৈচিত্র্যময় সংস্কৃতি এবং আন্তর্জাতিক পরিবেশে নিজেকে মানিয়ে নিন। এটি আপনার ব্যক্তিগত এবং পেশাদার বিকাশে সহায়তা করবে, যা আপনাকে বিশ্ব নাগরিক হিসেবে গড়ে তুলবে।
+                    </p>
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/4nsNL04m/9.png')">
+                    <img src="https://i.ibb.co/4nsNL04m/9.png" alt="বিজ্ঞাপন পোস্টার: গ্লোবাল এক্সপোজার">
+                </div>
+            </div>
+            <div class="image-section-content reverse-order">
+                <div class="text-content text-left md:order-2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Seamless Transition to Bachelor's</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        ডিপ্লোমা শেষে সহজেই ব্যাচেলর প্রোগ্রামে ভর্তির সুযোগ পান। আমাদের প্রোগ্রামটি আপনার উচ্চশিক্ষার পথকে মসৃণ করে তোলে, যাতে আপনি আপনার একাডেমিক লক্ষ্য অর্জন করতে পারেন।
+                    </p>
+                </div>
+                <div class="image-wrapper md:order-1" onclick="openModal('https://i.ibb.co/4n1JgKWP/10.png')">
+                    <img src="https://i.ibb.co/4n1JgKWP/10.png" alt="বিজ্ঞাপন পোস্টার: ব্যাচেলর প্রোগ্রামে সহজ রূপান্তর">
                 </div>
             </div>
         </div>
@@ -590,7 +773,7 @@
             <p class="text-lg text-gray-700 mb-6">
                 নিচের ফর্মটি পূরণ করুন এবং EduExpress International-এর একজন প্রতিনিধি দ্রুত আপনার সাথে যোগাযোগ করবে পরবর্তী পদক্ষেপগুলির জন্য।
             </p>
-            <form action="#" method="POST" class="space-y-4 text-left">
+            <form id="contactForm" action="#" method="POST" class="space-y-4 text-left">
                 <div>
                     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="আপনার পুরো নাম" required>
@@ -645,19 +828,21 @@
             <div class="mb-8">
                 <h3 class="text-2xl font-semibold text-gray-800 mb-4">Connect on Social Media</h3>
                 <div class="flex justify-center gap-8 flex-wrap">
-                    <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center contact-item">
                         <img src="https://i.ibb.co/whVJbTpY/image.png" alt="WeChat QR Code" class="rounded-lg shadow-md mb-2 w-32 h-32 object-contain">
                         <p class="text-sm text-gray-600">Scan for WeChat</p>
                     </div>
-                    <!-- Social Media Icons -->
-                    <a href="https://www.facebook.com/eduexpressint" target="_blank" aria-label="Facebook" class="social-icon">
+                    <a href="https://www.facebook.com/eduexpressint" target="_blank" aria-label="Facebook" class="social-icon contact-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="inline-block w-10 h-10"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.72.242-.72.731v1.177h2.05l-.232 2.028h-1.818v5.514h-2.408v-5.514h-1.818v-2.028h1.818v-1.107c0-1.783 1.16-2.915 3.043-2.915h2.05v2.188z"/></svg>
+                        <p class="text-sm text-gray-600">Facebook</p>
                     </a>
-                    <a href="https://instagram.com/eduexpressint" target="_blank" aria-label="Instagram" class="social-icon">
+                    <a href="https://instagram.com/eduexpressint" target="_blank" aria-label="Instagram" class="social-icon contact-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="inline-block w-10 h-10"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.204-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.584-.012-4.849-.069-3.251-.149-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.849 0-3.204.012-3.584.069-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.073 4.948.073 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        <p class="text-sm text-gray-600">Instagram</p>
                     </a>
-                    <a href="https://www.linkedin.com/company/eduexpress/" target="_blank" aria-label="LinkedIn" class="social-icon">
+                    <a href="https://www.linkedin.com/company/eduexpress/" target="_blank" aria-label="LinkedIn" class="social-icon contact-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="inline-block w-10 h-10"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.49-1.1-1.093 0-.603.493-1.093 1.1-1.093s1.1.49 1.1 1.093c0 .603-.493 1.093-1.1 1.093zm7 6.891h-2v-3.374c0-.811-.016-1.859-1.13-1.859-1.131 0-1.305.883-1.305 1.805v3.428h-2v-6h1.996v.857h.027c.331-.648.909-1.305 2.006-1.305 2.13 0 2.529 1.488 2.529 3.618v4.129h-2z"/></svg>
+                        <p class="text-sm text-gray-600">LinkedIn</p>
                     </a>
                 </div>
             </div>
@@ -674,6 +859,100 @@
             <p class="text-md">EduExpress International অফিস: House: 12/1, Ground Floor, Road: 4/A, Dhanmondi, Dhaka - 1209</p>
         </div>
     </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Success Message Modal -->
+    <div id="successModal" class="success-modal">
+        <div class="success-modal-content">
+            <h3>অভিনন্দন!</h3>
+            <p>আপনার আবেদন সফলভাবে জমা দেওয়া হয়েছে। EduExpress International-এর একজন প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবে।</p>
+            <button onclick="closeSuccessModal()">ঠিক আছে</button>
+        </div>
+    </div>
+
+    <script>
+        // Image Modal functionality
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+
+        function openModal(src) {
+            modalImage.src = src;
+            imageModal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeModal() {
+            imageModal.classList.remove('show');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal if clicked outside the image
+        imageModal.addEventListener('click', function(event) {
+            if (event.target === imageModal) {
+                closeModal();
+            }
+        });
+
+        // Form Submission Handling
+        const contactForm = document.getElementById('contactForm');
+        const successModal = document.getElementById('successModal');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // In a real application, you would send the form data to your server here.
+            // Example using fetch (requires server-side script to process and send email):
+            /*
+            const formData = new FormData(contactForm);
+            fetch('YOUR_SERVER_ENDPOINT_FOR_EMAIL', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                showSuccessMessage();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('ফর্ম জমা দিতে সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।');
+            });
+            */
+
+            // Simulate success for demonstration
+            console.log('Form data would be sent now:', {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            });
+
+            showSuccessMessage();
+            contactForm.reset(); // Clear the form
+        });
+
+        function showSuccessModal() {
+            successModal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeSuccessModal() {
+            successModal.classList.remove('show');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close success modal if clicked outside the content
+        successModal.addEventListener('click', function(event) {
+            if (event.target === successModal) {
+                closeSuccessModal();
+            }
+        });
+    </script>
 
 </body>
 </html>
