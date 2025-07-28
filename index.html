@@ -17,7 +17,7 @@
         .hero-section {
             background: linear-gradient(135deg, #002244 0%, #004488 100%);
             color: white;
-            padding: 6rem 1rem;
+            padding: 4rem 1rem; /* Adjusted padding */
             text-align: center;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
@@ -28,7 +28,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 70vh;
+            min-height: 55vh; /* Adjusted min-height */
         }
         .hero-section::before {
             content: '';
@@ -49,27 +49,27 @@
         .section-title {
             color: #003366;
             font-weight: 800;
-            margin-bottom: 2rem;
+            margin-bottom: 1.2rem; /* Adjusted margin */
             position: relative;
             display: inline-block;
-            font-size: 2.5rem;
+            font-size: 2rem; /* Adjusted font size */
             text-align: center;
         }
         .section-title::after {
             content: '';
             position: absolute;
             left: 50%;
-            bottom: -10px;
+            bottom: -8px; /* Adjusted position */
             transform: translateX(-50%);
-            width: 80px;
-            height: 5px;
+            width: 60px; /* Adjusted width */
+            height: 3px; /* Adjusted height */
             background-color: #3399CC;
             border-radius: 2px;
         }
         .card {
             background-color: white;
             border-radius: 15px;
-            padding: 2rem;
+            padding: 1.2rem; /* Adjusted padding */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
@@ -86,7 +86,7 @@
         .btn-primary {
             background-color: #3399CC;
             color: white;
-            padding: 1rem 3rem;
+            padding: 0.8rem 2.2rem; /* Adjusted padding */
             border-radius: 9999px;
             font-weight: 700;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
@@ -94,7 +94,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             display: inline-block;
-            margin-top: 1.5rem;
+            margin-top: 0.8rem; /* Adjusted margin */
         }
         .btn-primary:hover {
             background-color: #2a7da3;
@@ -104,7 +104,7 @@
         .btn-secondary {
             background-color: #f6ad55;
             color: white;
-            padding: 1rem 3rem;
+            padding: 0.8rem 2.2rem; /* Adjusted padding */
             border-radius: 9999px;
             font-weight: 700;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
@@ -112,7 +112,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             display: inline-block;
-            margin-top: 1.5rem;
+            margin-top: 0.8rem; /* Adjusted margin */
         }
         .btn-secondary:hover {
             background-color: #ed8936;
@@ -121,25 +121,25 @@
         }
         .feature-icon {
             color: #003366;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 2.8rem; /* Adjusted font size */
+            margin-bottom: 0.6rem; /* Adjusted margin */
             display: block;
             text-align: center;
         }
         .footer {
             background-color: #003366;
             color: white;
-            padding: 3rem 1rem;
+            padding: 1.5rem 1rem; /* Adjusted padding */
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
-            margin-top: 4rem;
+            margin-top: 2.5rem; /* Adjusted margin */
             text-align: center;
         }
         .edu-express-section {
             background-color: #e0f2fe;
-            padding: 4rem 1rem;
+            padding: 2.5rem 1rem; /* Adjusted padding */
             border-radius: 20px;
-            margin: 4rem auto;
+            margin: 2.5rem auto; /* Adjusted margin */
             max-width: 6xl;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             border: 1px solid #bfdbfe;
@@ -152,8 +152,8 @@
             background-color: #ffffff;
             border: 2px solid #3399CC;
             border-radius: 15px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
+            padding: 0.8rem; /* Adjusted padding */
+            margin-bottom: 0.6rem; /* Adjusted margin */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
@@ -166,11 +166,11 @@
         /* Improved form input styling */
         input[type="text"], input[type="email"], input[type="tel"], textarea {
             width: 100%;
-            padding: 1.2rem;
-            margin-bottom: 1.2rem;
+            padding: 1rem; /* Adjusted padding */
+            margin-bottom: 1rem; /* Adjusted margin */
             border: 2px solid #d1d5db;
             border-radius: 10px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             background-color: #f9fafb;
             transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
@@ -181,14 +181,16 @@
             background-color: #ffffff;
         }
         .benefit-icon {
-            font-size: 3rem;
+            font-size: 2.2rem; /* Adjusted font size */
             color: #003366;
-            margin-bottom: 1rem;
+            margin-bottom: 0.6rem; /* Adjusted margin */
         }
         section {
+            padding-top: 2.5rem; /* Adjusted padding */
+            padding-bottom: 2.5rem; /* Adjusted padding */
             padding-left: 1rem;
             padding-right: 1rem;
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem; /* Adjusted margin */
         }
         .max-w-6xl {
             max-width: 1152px;
@@ -205,21 +207,21 @@
         /* Styling for the All-Inclusive Service Package section */
         .service-package-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted min-width */
+            gap: 1.2rem; /* Adjusted gap */
+            padding: 1.2rem 0; /* Adjusted padding */
             justify-items: center;
             align-items: stretch;
         }
         .service-item {
             background-color: rgba(255, 255, 255, 0.2);
             border-radius: 15px;
-            padding: 2rem;
+            padding: 1.2rem; /* Adjusted padding */
             text-align: center;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
             width: 100%;
-            max-width: 350px;
+            max-width: 280px; /* Adjusted max-width */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -228,85 +230,85 @@
         }
         .service-item:hover {
             background-color: rgba(255, 255, 255, 0.35);
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         .service-item .feature-icon {
             color: white;
-            font-size: 4.5rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem; /* Adjusted font size */
+            margin-bottom: 0.6rem; /* Adjusted margin */
         }
         .service-item p {
-            font-size: 1.25rem;
+            font-size: 1rem; /* Adjusted font size */
             font-weight: 700;
             color: white;
         }
         .social-icon {
-            font-size: 3rem;
+            font-size: 2.2rem; /* Adjusted font size */
             color: #003366;
             transition: color 0.3s ease, transform 0.2s ease;
         }
         .social-icon:hover {
             color: #3399CC;
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
         .logo-header {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 1rem 0;
+            padding: 0.6rem 0; /* Adjusted padding */
             background-color: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .logo-header img {
-            max-height: 90px;
+            max-height: 60px; /* Adjusted max-height */
             width: auto;
         }
         .contact-info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted min-width */
+            gap: 1.5rem; /* Adjusted gap */
             justify-items: center;
-            align-items: stretch; /* Ensures cards stretch to same height */
+            align-items: stretch;
         }
         .contact-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 1rem;
-            min-height: 180px; /* Set a minimum height for consistency */
-            justify-content: space-evenly; /* Distributes content vertically */
+            padding: 0.6rem; /* Adjusted padding */
+            min-height: 150px; /* Adjusted min-height */
+            justify-content: space-evenly;
             background-color: white;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         .image-section-content {
             display: grid;
-            grid-template-columns: 1fr; /* Default to single column */
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1.2rem; /* Adjusted gap */
             align-items: center;
-            padding: 2rem 0;
+            padding: 1.2rem 0; /* Adjusted padding */
         }
         @media (min-width: 768px) {
             .image-section-content {
                 grid-template-columns: 1fr 1fr;
             }
             .image-section-content .text-content {
-                order: 0; /* Default order */
+                order: 0;
             }
             .image-section-content .image-wrapper {
-                order: 0; /* Default order */
+                order: 0;
             }
             .image-section-content.reverse-order .text-content {
-                order: 2; /* Text on right */
+                order: 2;
             }
             .image-section-content.reverse-order .image-wrapper {
-                order: 1; /* Image on left */
+                order: 1;
             }
         }
         .image-section-content .text-content {
-            padding: 1rem;
+            padding: 0.6rem; /* Adjusted padding */
         }
         .image-section-content .image-wrapper {
             border-radius: 15px;
@@ -319,24 +321,23 @@
             background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
         }
         .image-section-content .image-wrapper:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
         .image-section-content img {
             width: 100%;
-            height: 300px;
+            height: 220px; /* Adjusted height */
             object-fit: contain;
-            padding: 10px;
+            padding: 6px; /* Adjusted padding */
         }
-        /* New highlight for "All Payment After VISA" */
         .visa-payment-highlight {
             background-color: #d1fae5;
             color: #065f46;
             font-weight: 700;
-            padding: 0.75rem 1.5rem;
+            padding: 0.5rem 1rem; /* Adjusted padding */
             border-radius: 9999px;
             display: inline-block;
-            margin-top: 2rem;
+            margin-top: 1rem; /* Adjusted margin */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             animation: pulse 2s infinite;
         }
@@ -453,6 +454,26 @@
 </head>
 <body>
 
+    <!-- Facebook Pixel Code Placeholder -->
+    <!-- Place your Facebook Pixel Code here for lead generation tracking -->
+    <!-- Example:
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    -->
+
     <!-- Logo Header -->
     <div class="logo-header">
         <img src="https://i.ibb.co/C3PHVgMx/301753689136-pic-removebg-preview.png" alt="Guigang Peizheng Digital Vocational and Technical School Logo" onerror="this.onerror=null;this.src='https://placehold.co/200x80/003366/ffffff?text=School+Logo';">
@@ -464,9 +485,9 @@
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
             Guigang Peizheng Digital Vocational and Technical School
         </h1>
-        <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto">
+        <p class="text-lg sm:text-xl mb-6 max-w-3xl mx-auto leading-relaxed">
             চীনে আপনার উজ্জ্বল ভবিষ্যতের প্রবেশদ্বার!
-            <br class="hidden sm:inline">
+            <br>
             <span class="font-bold text-yellow-200 text-2xl">Study + Work: Opportunities for Students Across Asia!</span>
         </p>
         <a href="#lead-form" class="btn-primary">Limited Seats! Book Your Free Call Today!</a>
@@ -474,12 +495,12 @@
     </header>
 
     <!-- About Section -->
-    <section class="py-16 px-4">
+    <section class="py-10 px-4">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-12">আমাদের প্রোগ্রাম সম্পর্কে</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <h2 class="section-title mb-10">আমাদের প্রোগ্রাম সম্পর্কে</h2>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4 text-left">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-3 text-left">
                         Guangxi প্রদেশের Guigang শহরে অবস্থিত (Guangzhou থেকে মাত্র ২.৫ ঘণ্টার দূরত্বে), আমাদের স্কুল একটি গতিশীল <strong>৩ বছরের স্টাডি + ওয়ার্ক প্রোগ্রাম</strong> অফার করে। এই অনন্য প্রোগ্রামটি আপনাকে অত্যাধুনিক ব্যবহারিক দক্ষতা এবং অমূল্য বাস্তব অভিজ্ঞতা দিয়ে সজ্জিত করার জন্য ডিজাইন করা হয়েছে, যা আপনাকে বিশ্ব বাজারে আলাদা করে তুলবে।
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed text-left">
@@ -510,10 +531,10 @@
     </section>
 
     <!-- Why Study in China Section -->
-    <section class="py-16 px-4">
+    <section class="py-10 px-4">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-12">Why Study in China?</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+            <h2 class="section-title mb-10">Why Study in China?</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
                 <div class="card">
                     <span class="benefit-icon">🎓</span>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">World-Class Education</h3>
@@ -539,10 +560,10 @@
     </section>
 
     <!-- Majors Section -->
-    <section class="py-16 px-4 bg-gray-50">
+    <section class="py-10 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-12">Cutting-Edge Majors</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+            <h2 class="section-title mb-10">Cutting-Edge Majors</h2>
+            <div class="grid md:grid-cols-2 gap-6">
                 <div class="card">
                     <span class="feature-icon mb-4">⚙️</span>
                     <h3 class="text-xl font-bold text-gray-800">Mechanical & Electrical Technology (AMET)</h3>
@@ -558,30 +579,30 @@
     </section>
 
     <!-- Work Opportunities & Salary Section -->
-    <section class="py-16 px-4">
+    <section class="py-10 px-4">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-12 text-indigo-700">Work & Earn: Your Path to Financial Independence</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <h2 class="section-title mb-10 text-indigo-700">Work & Earn: Your Path to Financial Independence</h2>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div class="flex justify-center">
                     <div class="image-container">
                         <img src="https://i.ibb.co/X1R32hB/2711753724311-pic.jpg" alt="বিজ্ঞাপন পোস্টার: উচ্চ বেতনের কাজের সুযোগ">
                     </div>
                 </div>
                 <div>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4 text-left">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-3 text-left">
                         আমাদের প্রোগ্রামটি ব্যাপক ব্যবহারিক কাজের অভিজ্ঞতাকে অনন্যভাবে একত্রিত করে। শিক্ষার্থীরা প্রধানত মোবাইল ফোন ফ্যাক্টরি এবং অনুরূপ শিল্পে <strong>প্রতিদিন ৮ ঘণ্টা, সপ্তাহে ৬ দিন</strong> বেতনভুক্ত কাজ করে। এটি কেবল একটি চাকরি নয়; এটি আপনার শেখার একটি গুরুত্বপূর্ণ অংশ, যা আপনাকে তাৎক্ষণিক কর্মজীবনের সাফল্যের জন্য প্রস্তুত করে।
                     </p>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4 text-left">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-3 text-left">
                         আপনি কোয়ালিটি কন্ট্রোল, ইলেকট্রিক্যাল ওয়্যারিং, প্রোডাক্ট প্যাকেজিং এবং অ্যাসেম্বলি লাইন ওয়ার্কের মতো গুরুত্বপূর্ণ পদে হাতে-কলমে দক্ষতা অর্জন করবেন। এই নিমজ্জিত অভিজ্ঞতা নিশ্চিত করে যে আপনি একটি শক্তিশালী জীবনবৃত্তান্ত এবং ব্যবহারিক দক্ষতা নিয়ে স্নাতক হবেন।
                     </p>
-                    <div class="highlight-box mt-6">
+                    <div class="highlight-box mt-4">
                         <p class="text-2xl font-extrabold text-indigo-700 mb-2">
                             Exceptional Earning Potential:
                         </p>
                         <p class="text-4xl font-extrabold text-green-600 leading-tight">
                             ¥3,500 to ¥4,500 RMB/মাস <span class="text-xl font-semibold text-gray-600">(Performance-based Salary)</span>
                         </p>
-                        <p class="text-lg text-gray-700 mt-3">
+                        <p class="text-lg text-gray-700 mt-2">
                             প্রতি সেমিস্টারে <strong>৪ থেকে ৫ মাস বেতনভুক্ত কাজ</strong> করুন, যা আপনার জীবনযাত্রার এবং অধ্যয়নের খরচ উল্লেখযোগ্যভাবে পূরণ করতে পারে।
                         </p>
                     </div>
@@ -591,24 +612,24 @@
     </section>
 
     <!-- Costs Section -->
-    <section class="py-16 px-4 bg-gray-50">
+    <section class="py-10 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-12">Program & Living Costs</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <h2 class="section-title mb-10">Program & Living Costs</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
                 <div class="card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">বার্ষিক টিউশন ও আবাসন</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Tuition and Accomodation Fee</h3>
                     <p class="text-3xl font-bold text-indigo-600 mb-2">¥10,000 RMB/বছর</p>
-                    <p class="text-gray-600">(মাসিক কিস্তিতে পরিশোধযোগ্য)</p>
+                    <p class="text-gray-600">(can pay on monthly installment)</p>
                 </div>
                 <div class="card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">প্রাথমিক ফি (প্রাক-অনুমোদনের পর)</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Initial Deposit (After getting Pre-Admission)</h3>
                     <ul class="text-left text-gray-700 space-y-2">
                         <li><strong class="text-indigo-600">আবেদন ফি:</strong> ¥400 RMB</li>
                         <li><strong class="text-indigo-600">রেজিস্ট্রেশন ফি:</strong> ¥1,000 RMB</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">রেজিস্ট্রেশনকালীন খরচ (আনুমানিক)</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Payment at Registation time</h3>
                     <ul class="text-left text-gray-700 space-y-2">
                         <li><strong class="text-indigo-600">মেডিকেল চেকআপ:</strong> ¥350 RMB</li>
                         <li><strong class="text-indigo-600">টিউশন + হোস্টেল (১ম মাস):</strong> ¥1,000 RMB</li>
@@ -617,7 +638,7 @@
                     </ul>
                 </div>
                 <div class="card lg:col-span-2 mx-auto w-full">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">অতিরিক্ত এককালীন খরচ (আনুমানিক)</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Additional Cost (আনুমানিক)</h3>
                     <ul class="text-left text-gray-700 space-y-2">
                         <li><strong class="text-indigo-600">বেডিং সেট:</strong> ¥100-¥200 RMB</li>
                         <li><strong class="text-indigo-600">সিম কার্ড:</strong> ¥100 RMB</li>
@@ -629,26 +650,26 @@
     </section>
 
     <!-- Application Requirements & Documents Section -->
-    <section id="application" class="py-16 px-4">
+    <section id="application" class="py-10 px-4">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-12">Application & Requirements</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+            <h2 class="section-title mb-10">Application & Requirements</h2>
+            <div class="grid md:grid-cols-2 gap-6">
                 <div class="card">
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">যোগ্যতা</h3>
                     <ul class="text-left text-gray-700 space-y-2">
+                        <li><strong class="text-indigo-600">Education Qualification:</strong> SSC/Dhakil/Technical Eqavilent</li>
                         <li><strong class="text-indigo-600">Age:</strong> ১৮ থেকে ৩০ বছর</li>
                         <li><strong class="text-indigo-600">Encouraged:</strong> Students from Asian Countries</li>
-                        <li><strong class="text-indigo-600">Initial Application & Registration Fee:</strong> ¥1,400 RMB (আনুষ্ঠানিক ভর্তি এবং JW202 ভিসা ফর্ম ইস্যুর জন্য প্রয়োজন)</li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">প্রয়োজনীয় কাগজপত্র</h3>
                     <ul class="text-left text-gray-700 space-y-2">
-                        <li>বৈধ পাসপোর্ট</li>
-                        <li>একাডেমিক সার্টিফিকেট ও ট্রান্সক্রিপ্ট</li>
-                        <li>পাসপোর্ট সাইজের ছবি</li>
-                        <li>পুলিশ ক্লিয়ারেন্স সার্টিফিকেট</li>
-                        <li>ব্যাংক স্টেটমেন্ট (আর্থিক প্রমাণ)</li>
+                        <li>Valid Passport</li>
+                        <li>Academic Certificates & Transcript</li>
+                        <li>Passport-size Photographs</li>
+                        <li>Police Clearance Certificate</li>
+                        <li>Bank Statement (Financial Proof)</li>
                     </ul>
                 </div>
             </div>
@@ -656,9 +677,9 @@
     </section>
 
     <!-- Full Service Package Section -->
-    <section class="py-16 px-4 bg-indigo-700 text-white rounded-t-3xl">
+    <section class="py-10 px-4 bg-indigo-700 text-white rounded-t-3xl">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12 relative inline-block">
+            <h2 class="text-3xl font-bold mb-10 relative inline-block">
                 Our All-Inclusive Service Package For Bangladeshi Students
                 <span class="absolute left-1/2 bottom-[-10px] transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></span>
             </h2>
@@ -692,10 +713,10 @@
     </section>
 
     <!-- New Image Sections (Advertising Posters) -->
-    <section class="py-16 px-4 bg-gray-100">
+    <section class="py-10 px-4 bg-gray-100">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-12"></h2> <!-- Section title left empty as requested -->
-            <div class="image-section-content mb-12">
+            <h2 class="section-title mb-10"></h2>
+            <div class="image-section-content mb-10">
                 <div class="text-content text-left">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Practical Training Environment</h3>
                     <p class="text-lg text-gray-700 leading-relaxed">
@@ -707,7 +728,7 @@
                 </div>
             </div>
 
-            <div class="image-section-content reverse-order mb-12">
+            <div class="image-section-content reverse-order mb-10">
                 <div class="text-content text-left md:order-2">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Dynamic Campus Life</h3>
                     <p class="text-lg text-gray-700 leading-relaxed">
@@ -719,7 +740,7 @@
                 </div>
             </div>
 
-            <div class="image-section-content mb-12">
+            <div class="image-section-content mb-10">
                 <div class="text-content text-left">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Modern Facilities for Learning</h3>
                     <p class="text-lg text-gray-700 leading-relaxed">
@@ -730,7 +751,7 @@
                     <img src="https://i.ibb.co/6cC5G4Mn/7.png" alt="বিজ্ঞাপন পোস্টার: আধুনিক শেখার সুবিধা">
                 </div>
             </div>
-             <div class="image-section-content reverse-order mb-12">
+             <div class="image-section-content reverse-order mb-10">
                 <div class="text-content text-left md:order-2">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Career Opportunities Await</h3>
                     <p class="text-lg text-gray-700 leading-relaxed">
@@ -741,7 +762,7 @@
                     <img src="https://i.ibb.co/fByZ4Gv/8.png" alt="বিজ্ঞাপন পোস্টার: ক্যারিয়ারের সুযোগ">
                 </div>
             </div>
-            <div class="image-section-content mb-12">
+            <div class="image-section-content mb-10">
                 <div class="text-content text-left">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Global Exposure</h3>
                     <p class="text-lg text-gray-700 leading-relaxed">
@@ -767,7 +788,7 @@
     </section>
 
     <!-- Lead Generation Form Section -->
-    <section id="lead-form" class="py-16 px-4 bg-blue-100">
+    <section id="lead-form" class="py-10 px-4 bg-blue-100">
         <div class="max-w-3xl mx-auto text-center card">
             <h2 class="section-title text-blue-800 mb-8">Book Your Free Call Today!</h2>
             <p class="text-lg text-gray-700 mb-6">
@@ -798,7 +819,7 @@
     </section>
 
     <!-- EduExpress International Contact Section -->
-    <section id="edu-express-contact" class="py-16 px-4 bg-white">
+    <section id="edu-express-contact" class="py-10 px-4 bg-white">
         <div class="max-w-4xl mx-auto text-center card">
             <h2 class="section-title mb-8">Connect with EduExpress International</h2>
             <p class="text-lg text-gray-700 mb-6">
