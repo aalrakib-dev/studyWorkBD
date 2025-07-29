@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Base styles for the body, setting font, background color, and a subtle pattern */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f0f4f8;
@@ -14,10 +15,11 @@
             background-image: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23cbd5e0" fill-opacity="0.2" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20V40zm40 0V20L20 40H40zm0-40L0 40V20L20 0H40zM0 0L40 40V20L20 0H0z"/%3E%3C/g%3E%3C/svg%3E');
             background-repeat: repeat;
         }
+        /* Hero section styling with gradient, rounded corners, and a subtle overlay pattern */
         .hero-section {
             background: linear-gradient(135deg, #002244 0%, #004488 100%);
             color: white;
-            padding: 4rem 1rem; /* Adjusted padding */
+            padding: 4rem 1.5rem; /* Adjusted padding for better spacing */
             text-align: center;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
@@ -28,8 +30,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 55vh; /* Adjusted min-height */
+            min-height: 60vh; /* Adjusted min-height for more prominence */
         }
+        /* Overlay pattern for the hero section */
         .hero-section::before {
             content: '';
             position: absolute;
@@ -46,30 +49,32 @@
             z-index: 1;
         }
 
+        /* Styling for section titles with an underline effect */
         .section-title {
             color: #003366;
             font-weight: 800;
-            margin-bottom: 1.2rem; /* Adjusted margin */
+            margin-bottom: 1.5rem; /* Adjusted margin */
             position: relative;
             display: inline-block;
-            font-size: 2rem; /* Adjusted font size */
+            font-size: 2.2rem; /* Adjusted font size for larger screens */
             text-align: center;
         }
         .section-title::after {
             content: '';
             position: absolute;
             left: 50%;
-            bottom: -8px; /* Adjusted position */
+            bottom: -10px; /* Adjusted position */
             transform: translateX(-50%);
-            width: 60px; /* Adjusted width */
-            height: 3px; /* Adjusted height */
+            width: 70px; /* Adjusted width */
+            height: 4px; /* Adjusted height */
             background-color: #3399CC;
             border-radius: 2px;
         }
+        /* Card styling with padding, border-radius, and hover effects */
         .card {
             background-color: white;
             border-radius: 15px;
-            padding: 1.2rem; /* Adjusted padding */
+            padding: 1.5rem; /* Adjusted padding */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
@@ -83,10 +88,11 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
+        /* Primary button styling with gradient, rounded corners, and hover effects */
         .btn-primary {
             background-color: #3399CC;
             color: white;
-            padding: 0.8rem 2.2rem; /* Adjusted padding */
+            padding: 0.9rem 2.5rem; /* Adjusted padding */
             border-radius: 9999px;
             font-weight: 700;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
@@ -94,17 +100,18 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             display: inline-block;
-            margin-top: 0.8rem; /* Adjusted margin */
+            margin-top: 1rem; /* Adjusted margin */
         }
         .btn-primary:hover {
             background-color: #2a7da3;
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
         }
+        /* Secondary button styling with different color and similar hover effects */
         .btn-secondary {
             background-color: #f6ad55;
             color: white;
-            padding: 0.8rem 2.2rem; /* Adjusted padding */
+            padding: 0.9rem 2.5rem; /* Adjusted padding */
             border-radius: 9999px;
             font-weight: 700;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
@@ -112,34 +119,37 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             display: inline-block;
-            margin-top: 0.8rem; /* Adjusted margin */
+            margin-top: 1rem; /* Adjusted margin */
         }
         .btn-secondary:hover {
             background-color: #ed8936;
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
         }
+        /* Styling for feature icons within cards */
         .feature-icon {
             color: #003366;
-            font-size: 2.8rem; /* Adjusted font size */
-            margin-bottom: 0.6rem; /* Adjusted margin */
+            font-size: 3rem; /* Adjusted font size */
+            margin-bottom: 0.8rem; /* Adjusted margin */
             display: block;
             text-align: center;
         }
+        /* Footer styling with dark background and rounded top corners */
         .footer {
             background-color: #003366;
             color: white;
-            padding: 1.5rem 1rem; /* Adjusted padding */
+            padding: 2rem 1.5rem; /* Adjusted padding */
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
-            margin-top: 2.5rem; /* Adjusted margin */
+            margin-top: 3rem; /* Adjusted margin */
             text-align: center;
         }
+        /* Styling for the EduExpress International specific section */
         .edu-express-section {
             background-color: #e0f2fe;
-            padding: 2.5rem 1rem; /* Adjusted padding */
+            padding: 3rem 1.5rem; /* Adjusted padding */
             border-radius: 20px;
-            margin: 2.5rem auto; /* Adjusted margin */
+            margin: 3rem auto; /* Adjusted margin */
             max-width: 6xl;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             border: 1px solid #bfdbfe;
@@ -148,22 +158,23 @@
         .edu-express-section .section-title::after {
             background-color: #003366;
         }
+        /* Highlight box styling for important information */
         .highlight-box {
             background-color: #ffffff;
             border: 2px solid #3399CC;
             border-radius: 15px;
-            padding: 0.8rem; /* Adjusted padding */
-            margin-bottom: 0.6rem; /* Adjusted margin */
+            padding: 1rem; /* Adjusted padding */
+            margin-bottom: 0.8rem; /* Adjusted margin */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        /* Lead form card gradient */
+        /* Lead form card specific gradient background */
         #lead-form .card {
             background: linear-gradient(145deg, #ffffff 0%, #e6f0ff 100%);
             border: 1px solid #cce0ff;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
-        /* Improved form input styling */
+        /* Improved form input styling for consistency and focus effects */
         input[type="text"], input[type="email"], input[type="tel"], textarea {
             width: 100%;
             padding: 1rem; /* Adjusted padding */
@@ -180,23 +191,27 @@
             box-shadow: 0 0 0 4px rgba(51, 153, 204, 0.4);
             background-color: #ffffff;
         }
+        /* Styling for benefit icons */
         .benefit-icon {
-            font-size: 2.2rem; /* Adjusted font size */
+            font-size: 2.5rem; /* Adjusted font size */
             color: #003366;
-            margin-bottom: 0.6rem; /* Adjusted margin */
+            margin-bottom: 0.8rem; /* Adjusted margin */
         }
+        /* General section padding */
         section {
-            padding-top: 2.5rem; /* Adjusted padding */
-            padding-bottom: 2.5rem; /* Adjusted padding */
-            padding-left: 1rem;
-            padding-right: 1rem;
-            margin-bottom: 2.5rem; /* Adjusted margin */
+            padding-top: 3rem; /* Adjusted padding */
+            padding-bottom: 3rem; /* Adjusted padding */
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            margin-bottom: 3rem; /* Adjusted margin */
         }
+        /* Max width for content containers */
         .max-w-6xl {
             max-width: 1152px;
             margin-left: auto;
             margin-right: auto;
         }
+        /* Text alignment utilities */
         .text-left {
             text-align: left;
         }
@@ -204,24 +219,25 @@
             text-align: center;
         }
 
-        /* Styling for the All-Inclusive Service Package section */
+        /* Styling for the All-Inclusive Service Package section grid */
         .service-package-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted min-width */
-            gap: 1.2rem; /* Adjusted gap */
-            padding: 1.2rem 0; /* Adjusted padding */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted min-width for better fit */
+            gap: 1.5rem; /* Adjusted gap */
+            padding: 1.5rem 0; /* Adjusted padding */
             justify-items: center;
             align-items: stretch;
         }
+        /* Styling for individual service items within the package grid */
         .service-item {
             background-color: rgba(255, 255, 255, 0.2);
             border-radius: 15px;
-            padding: 1.2rem; /* Adjusted padding */
+            padding: 1.5rem; /* Adjusted padding */
             text-align: center;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
             width: 100%;
-            max-width: 280px; /* Adjusted max-width */
+            max-width: 300px; /* Adjusted max-width */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -235,16 +251,17 @@
         }
         .service-item .feature-icon {
             color: white;
-            font-size: 3.5rem; /* Adjusted font size */
-            margin-bottom: 0.6rem; /* Adjusted margin */
+            font-size: 4rem; /* Adjusted font size */
+            margin-bottom: 0.8rem; /* Adjusted margin */
         }
         .service-item p {
-            font-size: 1rem; /* Adjusted font size */
+            font-size: 1.1rem; /* Adjusted font size */
             font-weight: 700;
             color: white;
         }
+        /* Styling for social media icons */
         .social-icon {
-            font-size: 2.2rem; /* Adjusted font size */
+            font-size: 2.5rem; /* Adjusted font size */
             color: #003366;
             transition: color 0.3s ease, transform 0.2s ease;
         }
@@ -252,65 +269,49 @@
             color: #3399CC;
             transform: translateY(-3px);
         }
+        /* Header containing logos */
         .logo-header {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0.6rem 0; /* Adjusted padding */
+            padding: 0.8rem 0; /* Adjusted padding */
             background-color: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .logo-header img {
-            max-height: 60px; /* Adjusted max-height */
+            max-height: 70px; /* Adjusted max-height */
             width: auto;
         }
+        /* Grid for contact information */
         .contact-info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted min-width */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted min-width */
             gap: 1.5rem; /* Adjusted gap */
             justify-items: center;
             align-items: stretch;
         }
+        /* Styling for individual contact items */
         .contact-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 0.6rem; /* Adjusted padding */
-            min-height: 150px; /* Adjusted min-height */
+            padding: 1rem; /* Adjusted padding */
+            min-height: 160px; /* Adjusted min-height */
             justify-content: space-evenly;
             background-color: white;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        .image-section-content {
+        /* Styling for image galleries */
+        .image-gallery-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.2rem; /* Adjusted gap */
-            align-items: center;
-            padding: 1.2rem 0; /* Adjusted padding */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for images */
+            gap: 1.5rem; /* Spacing between images */
+            padding: 1.5rem 0;
+            justify-items: center;
         }
-        @media (min-width: 768px) {
-            .image-section-content {
-                grid-template-columns: 1fr 1fr;
-            }
-            .image-section-content .text-content {
-                order: 0;
-            }
-            .image-section-content .image-wrapper {
-                order: 0;
-            }
-            .image-section-content.reverse-order .text-content {
-                order: 2;
-            }
-            .image-section-content.reverse-order .image-wrapper {
-                order: 1;
-            }
-        }
-        .image-section-content .text-content {
-            padding: 0.6rem; /* Adjusted padding */
-        }
-        .image-section-content .image-wrapper {
+        .image-gallery-grid .image-wrapper {
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             overflow: hidden;
@@ -319,29 +320,41 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
+            height: 250px; /* Fixed height for consistent gallery display */
+            width: 100%;
+            cursor: pointer; /* Indicate clickability */
         }
-        .image-section-content .image-wrapper:hover {
+        .image-gallery-grid .image-wrapper:hover {
             transform: scale(1.03);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
-        .image-section-content img {
+        .image-gallery-grid img {
             width: 100%;
-            height: 220px; /* Adjusted height */
-            object-fit: contain;
-            padding: 6px; /* Adjusted padding */
+            height: 100%;
+            object-fit: cover; /* Cover the area, cropping if necessary */
+            padding: 8px; /* Padding inside the wrapper */
         }
+
+        /* Responsive adjustments for section titles on medium screens and up */
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.8rem; /* Larger font size for desktop */
+            }
+        }
+        /* Highlight for visa payment with pulsing animation */
         .visa-payment-highlight {
             background-color: #d1fae5;
             color: #065f46;
             font-weight: 700;
-            padding: 0.5rem 1rem; /* Adjusted padding */
+            padding: 0.6rem 1.2rem; /* Adjusted padding */
             border-radius: 9999px;
             display: inline-block;
-            margin-top: 1rem; /* Adjusted margin */
+            margin-top: 1.2rem; /* Adjusted margin */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             animation: pulse 2s infinite;
         }
 
+        /* Keyframe animation for the pulse effect */
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.02); }
@@ -474,13 +487,15 @@
     /></noscript>
     -->
 
-    <!-- Logo Header -->
+    <!-- Logo Header Section -->
     <div class="logo-header">
+        <!-- School Logo with fallback placeholder -->
         <img src="https://i.ibb.co/C3PHVgMx/301753689136-pic-removebg-preview.png" alt="Guigang Peizheng Digital Vocational and Technical School Logo" onerror="this.onerror=null;this.src='https://placehold.co/200x80/003366/ffffff?text=School+Logo';">
+        <!-- EduExpress International Logo -->
         <img src="https://eduexpressint.com/wp-content/uploads/2023/04/edu-express-logo.png" alt="EduExpress International Logo" class="ml-4">
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section: Main Call to Action -->
     <header class="hero-section">
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
             Guigang Peizheng Digital Vocational and Technical School
@@ -494,34 +509,35 @@
         <div class="visa-payment-highlight">All Payment After VISA!</div>
     </header>
 
-    <!-- About Section -->
-    <section class="py-10 px-4">
+    <!-- About Section: Program Overview -->
+    <section class="py-12 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-10">আমাদের প্রোগ্রাম সম্পর্কে</h2>
             <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-3 text-left">
-                        Guangxi প্রদেশের Guigang শহরে অবস্থিত (Guangzhou থেকে মাত্র ২.৫ ঘণ্টার দূরত্বে), আমাদের স্কুল একটি গতিশীল <strong>৩ বছরের স্টাডি + ওয়ার্ক প্রোগ্রাম</strong> অফার করে। এই অনন্য প্রোগ্রামটি আপনাকে অত্যাধুনিক ব্যবহারিক দক্ষতা এবং অমূল্য বাস্তব অভিজ্ঞতা দিয়ে সজ্জিত করার জন্য ডিজাইন করা হয়েছে, যা আপনাকে বিশ্ব বাজারে আলাদা করে তুলবে।
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4 text-left">
+                        Guangxi প্রদেশের Guigang শহরে অবস্থিত (Guangzhou থেকে মাত্র ২.৫ ঘণ্টার দূরত্বে), আমাদের স্কুল একটি গতিশীল <strong>৩ বছরের স্টাডি + ওয়ার্ক প্রোগ্রাম</strong> অফার করে। এই অনন্য প্রোগ্রামটি আপনাকে অত্যাধুনিক ব্যবহারিক দক্ষতা এবং অমূল্য বাস্তব অভিজ্ঞতা দিয়ে সজ্জিত করার জন্য ডিজাইন করা হয়েছে, যা আপনাকে বিশ্ব বাজারে আলাদা করে তুলবে।
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed text-left">
-                        আবেদন জমা দেওয়ার মাত্র <strong>১ সপ্তাহের মধ্যে দ্রুত প্রাক-ভর্তি সিদ্ধান্ত</strong> সহ একটি সুবিন্যস্ত আবেদন প্রক্রিয়ার অভিজ্ঞতা নিন। একটি উত্তেজনাপূর্ণ শিক্ষামূলক যাত্রা শুরু করুন যা উচ্চ-মানের বৃত্তিমূলক প্রশিক্ষণকে ফলপ্রসূ বেতনভুক্ত কাজের সুযোগের সাথে নির্বিঘ্নে একত্রিত করে।
+                        আবেদন জমা দেওয়ার মাত্র <strong>১ সপ্তাহের মধ্যে দ্রুত প্রাক-ভর্তি সিদ্ধান্ত</strong> সহ একটি সুবিন্যস্ত আবেদন প্রক্রিয়ার অভিজ্ঞতা নিন। একটি উত্তেজনাপূর্ণ শিক্ষামূলক যাত্রা শুরু করুন যা উচ্চ-মানের বৃত্তিমূলক প্রশিক্ষণকে ফলপ্রসূ বেতনভুক্ত কাজের সুযোগের সাথে নির্বিঘ্নে একত্রিত করে।
                     </p>
                 </div>
+                <!-- Image for About Section with responsiveness -->
                 <div class="flex justify-center">
-                    <div class="image-container">
-                        <img src="https://i.ibb.co/0prQbcF8/2721753724313-pic.jpg" alt="বিজ্ঞাপন পোস্টার: শিক্ষার্থীদের চীনা জীবনযাত্রা">
+                    <div class="image-wrapper">
+                        <img src="https://i.ibb.co/0prQbcF8/2721753724313-pic.jpg" alt="বিজ্ঞাপন পোস্টার: শিক্ষার্থীদের চীনা জীবনযাত্রা" class="rounded-lg shadow-md w-full max-h-[300px] object-contain p-2">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EduExpress International Section -->
+    <!-- EduExpress International Section: Partner Details -->
     <section class="edu-express-section mx-auto px-4">
         <div class="text-center">
             <h2 class="section-title text-blue-800 mb-8">Your Exclusive Partner in Bangladesh & Asia</h2>
             <p class="text-xl text-blue-700 mb-6 max-w-3xl mx-auto font-semibold">
-                <strong>EduExpress International</strong> গর্বের সাথে Guigang Peizheng Digital Vocational and Technical School-এর ৩ বছরের স্টাডি + ওয়ার্ক প্রোগ্রামের জন্য ঢাকা, বাংলাদেশে <strong>একমাত্র অনুমোদিত এজেন্ট</strong>, যা সারা এশিয়ার শিক্ষার্থীদের সেবা প্রদান করে।
+                <strong>EduExpress International</strong> গর্বের সাথে Guigang Peizheng Digital Vocational and Technical School-এর ৩ বছরের স্টাডি + ওয়ার্ক প্রোগ্রামের জন্য ঢাকা, বাংলাদেশে <strong>একমাত্র অনুমোদিত এজেন্ট</strong>, যা সারা এশিয়ার শিক্ষার্থীদের সেবা প্রদান করে।
             </p>
             <p class="text-lg text-blue-600 mb-8 max-w-4xl mx-auto">
                 আমরা আপনার যাত্রার প্রতিটি ধাপে শিক্ষার্থীদের অতুলনীয় নির্দেশনা এবং সহায়তা প্রদানে সম্পূর্ণরূপে প্রতিশ্রুতিবদ্ধ – প্রাথমিক আবেদন এবং ভিসা প্রক্রিয়া থেকে শুরু করে চাকরি পরিষেবা এবং প্রাক-প্রস্থান প্রস্তুতি পর্যন্ত। আমরা আপনাকে ১০০% পর্যন্ত স্কলারশিপ খুঁজে পেতে সাহায্য করি এবং <strong>কোনো ফাইল ওপেনিং চার্জ নেই!</strong> চীনে আপনার উজ্জ্বল এবং সমৃদ্ধ ভবিষ্যৎ আমাদের বিশেষজ্ঞ সহায়তায় শুরু হয়!
@@ -530,11 +546,11 @@
         </div>
     </section>
 
-    <!-- Why Study in China Section -->
-    <section class="py-10 px-4">
+    <!-- Why Study in China Section: Benefits -->
+    <section class="py-12 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-10">Why Study in China?</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
                 <div class="card">
                     <span class="benefit-icon">🎓</span>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">World-Class Education</h3>
@@ -543,7 +559,7 @@
                 <div class="card">
                     <span class="benefit-icon">💸</span>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Earn While You Learn</h3>
-                    <p class="text-gray-600">আপনার প্রোগ্রামের বেতন দিয়ে টিউশন ফি এবং জীবনযাত্রার সকল খরচ কভার করতে পারবেন!</p>
+                    <p class="text-gray-600">আপনার প্রোগ্রামের বেতন দিয়ে টিউশন ফি এবং জীবনযাত্রার সকল খরচ কভার করতে পারবেন!</p>
                 </div>
                 <div class="card">
                     <span class="benefit-icon">🗣️</span>
@@ -559,11 +575,11 @@
         </div>
     </section>
 
-    <!-- Majors Section -->
-    <section class="py-10 px-4 bg-gray-50">
+    <!-- Majors Section: Available Programs -->
+    <section class="py-12 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-10">Cutting-Edge Majors</h2>
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-2 gap-8">
                 <div class="card">
                     <span class="feature-icon mb-4">⚙️</span>
                     <h3 class="text-xl font-bold text-gray-800">Mechanical & Electrical Technology (AMET)</h3>
@@ -579,20 +595,21 @@
     </section>
 
     <!-- Work Opportunities & Salary Section -->
-    <section class="py-10 px-4">
+    <section class="py-12 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-10 text-indigo-700">Work & Earn: Your Path to Financial Independence</h2>
             <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Image for Work Opportunities Section with responsiveness -->
                 <div class="flex justify-center">
-                    <div class="image-container">
-                        <img src="https://i.ibb.co/X1R32hB/2711753724311-pic.jpg" alt="বিজ্ঞাপন পোস্টার: উচ্চ বেতনের কাজের সুযোগ">
+                    <div class="image-wrapper">
+                        <img src="https://i.ibb.co/X1R32hB/2711753724311-pic.jpg" alt="বিজ্ঞাপন পোস্টার: উচ্চ বেতনের কাজের সুযোগ" class="rounded-lg shadow-md w-full max-h-[300px] object-contain p-2">
                     </div>
                 </div>
                 <div>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-3 text-left">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4 text-left">
                         আমাদের প্রোগ্রামটি ব্যাপক ব্যবহারিক কাজের অভিজ্ঞতাকে অনন্যভাবে একত্রিত করে। শিক্ষার্থীরা প্রধানত মোবাইল ফোন ফ্যাক্টরি এবং অনুরূপ শিল্পে <strong>প্রতিদিন ৮ ঘণ্টা, সপ্তাহে ৬ দিন</strong> বেতনভুক্ত কাজ করে। এটি কেবল একটি চাকরি নয়; এটি আপনার শেখার একটি গুরুত্বপূর্ণ অংশ, যা আপনাকে তাৎক্ষণিক কর্মজীবনের সাফল্যের জন্য প্রস্তুত করে।
                     </p>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-3 text-left">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4 text-left">
                         আপনি কোয়ালিটি কন্ট্রোল, ইলেকট্রিক্যাল ওয়্যারিং, প্রোডাক্ট প্যাকেজিং এবং অ্যাসেম্বলি লাইন ওয়ার্কের মতো গুরুত্বপূর্ণ পদে হাতে-কলমে দক্ষতা অর্জন করবেন। এই নিমজ্জিত অভিজ্ঞতা নিশ্চিত করে যে আপনি একটি শক্তিশালী জীবনবৃত্তান্ত এবং ব্যবহারিক দক্ষতা নিয়ে স্নাতক হবেন।
                     </p>
                     <div class="highlight-box mt-4">
@@ -611,11 +628,11 @@
         </div>
     </section>
 
-    <!-- Costs Section -->
-    <section class="py-10 px-4 bg-gray-50">
+    <!-- Costs Section: Program and Living Expenses -->
+    <section class="py-12 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-10">Program & Living Costs</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
                 <div class="card">
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">Tuition and Accomodation Fee</h3>
                     <p class="text-3xl font-bold text-indigo-600 mb-2">¥10,000 RMB/বছর</p>
@@ -650,10 +667,10 @@
     </section>
 
     <!-- Application Requirements & Documents Section -->
-    <section id="application" class="py-10 px-4">
+    <section id="application" class="py-12 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-10">Application & Requirements</h2>
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-2 gap-8">
                 <div class="card">
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">যোগ্যতা</h3>
                     <ul class="text-left text-gray-700 space-y-2">
@@ -677,7 +694,7 @@
     </section>
 
     <!-- Full Service Package Section -->
-    <section class="py-10 px-4 bg-indigo-700 text-white rounded-t-3xl">
+    <section class="py-12 px-4 bg-indigo-700 text-white rounded-t-3xl">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-10 relative inline-block">
                 Our All-Inclusive Service Package For Bangladeshi Students
@@ -712,83 +729,101 @@
         </div>
     </section>
 
-    <!-- New Image Sections (Advertising Posters) -->
-    <section class="py-10 px-4 bg-gray-100">
+    <!-- Campus and Classroom View Section -->
+    <section class="py-12 px-4 bg-gray-100">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-10"></h2>
-            <div class="image-section-content mb-10">
-                <div class="text-content text-left">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Practical Training Environment</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        আমাদের প্রোগ্রামের একটি মূল অংশ হলো হাতে-কলমে প্রশিক্ষণ। অত্যাধুনিক ল্যাব এবং কর্মশালায় আপনি সরাসরি ইন্ডাস্ট্রির পরিবেশে কাজ করার সুযোগ পাবেন, যা আপনাকে ভবিষ্যতের জন্য প্রস্তুত করবে।
-                    </p>
+            <h2 class="section-title mb-10">Campus and Classroom View</h2>
+            <div class="image-gallery-grid">
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/5g1mHr58/IMG-4116.jpg')">
+                    <img src="https://i.ibb.co/5g1mHr58/IMG-4116.jpg" alt="Campus View 1" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Campus+1';">
                 </div>
-                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/FL5X6whZ/5.png')">
-                    <img src="https://i.ibb.co/FL5X6whZ/5.png" alt="বিজ্ঞাপন পোস্টার: ব্যবহারিক প্রশিক্ষণের পরিবেশ">
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/v4jT0gsF/IMG-4125.jpg')">
+                    <img src="https://i.ibb.co/v4jT0gsF/IMG-4125.jpg" alt="Campus View 2" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Campus+2';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/xwYgJ7Y/IMG-4140.jpg')">
+                    <img src="https://i.ibb.co/xwYgJ7Y/IMG-4140.jpg" alt="Classroom View 1" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Classroom+1';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/0pbLBwY1/IMG-4147.jpg')">
+                    <img src="https://i.ibb.co/0pbLBwY1/IMG-4147.jpg" alt="Classroom View 2" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Classroom+2';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/Ld8Fg2dC/IMG-4149.jpg')">
+                    <img src="https://i.ibb.co/B2tp6S2g/IMG-4149.jpg" alt="Campus View 3" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Campus+3';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/ynBqQvP2/IMG-4194.jpg')">
+                    <img src="https://i.ibb.co/VWpTqn96/IMG-4194.jpg" alt="Classroom View 3" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Classroom+3';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/gM692yxP/IMG-4210.jpg')">
+                    <img src="https://i.ibb.co/vxDqF1SQ/IMG-4210.jpg" alt="Campus View 4" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Campus+4';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/63D1Q8g/IMG-8640.jpg')">
+                    <img src="https://i.ibb.co/v7LQ9hZ/IMG-8640.jpg" alt="Classroom View 4" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Classroom+4';">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="image-section-content reverse-order mb-10">
-                <div class="text-content text-left md:order-2">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Dynamic Campus Life</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        পড়াশোনার পাশাপাশি একটি প্রাণবন্ত ক্যাম্পাস জীবন আপনার জন্য অপেক্ষা করছে। আন্তর্জাতিক শিক্ষার্থীদের সাথে মেলামেশা, সাংস্কৃতিক অনুষ্ঠান এবং বিভিন্ন কার্যক্রমে অংশ নিয়ে আপনার অভিজ্ঞতাকে আরও সমৃদ্ধ করুন।
-                    </p>
+    <!-- Hostel View Section -->
+    <section class="py-12 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="section-title mb-10">Hostel View</h2>
+            <div class="image-gallery-grid">
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/k2DJ4FWR/2851752748193-pic-768x576.jpg')">
+                    <img src="https://i.ibb.co/Swmctp9h/2851752748193-pic-768x576.jpg" alt="Hostel View 1" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Hostel+1';">
                 </div>
-                <div class="image-wrapper md:order-1" onclick="openModal('https://i.ibb.co/M5JLMXbb/6.png')">
-                    <img src="https://i.ibb.co/M5JLMXbb/6.png" alt="বিজ্ঞাপন পোস্টার: ডাইনামিক ক্যাম্পাস লাইফ">
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/JRC7FMDX/2861752748194-pic-768x576.jpg')">
+                    <img src="https://i.ibb.co/ccxFX74z/2861752748194-pic-768x576.jpg" alt="Hostel View 2" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Hostel+2';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/XZG8HwyR/2871752748195-pic-768x576.jpg')">
+                    <img src="https://i.ibb.co/PZVQkSTH/2871752748195-pic-768x576.jpg" alt="Hostel View 3" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Hostel+3';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/LDD0n24D/2881752748196-pic-768x576.jpg')">
+                    <img src="https://i.ibb.co/xKK2JRVK/2881752748196-pic-768x576.jpg" alt="Hostel View 4" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Hostel+4';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/dw4D6V6Q/2891752748197-pic-hd-768x576.jpg')">
+                    <img src="https://i.ibb.co/wFh4CPCK/2891752748197-pic-hd-768x576.jpg" alt="Hostel View 5" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Hostel+5';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/Qv2CpGsR/IMG-4175.jpg')">
+                    <img src="https://i.ibb.co/chGCkdzH/IMG-4175.jpg" alt="Hostel View 6" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Hostel+6';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/dwjmBbJB/IMG-4177.jpg')">
+                    <img src="https://i.ibb.co/XrjYXykX/IMG-4177.jpg" alt="Hostel View 7" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Hostel+7';">
+                </div>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/h1cd08Px/IMG-4179.jpg')">
+                    <img src="https://i.ibb.co/mF0ypzLr/IMG-4179.jpg" alt="Hostel View 8" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Hostel+8';">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="image-section-content mb-10">
-                <div class="text-content text-left">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Modern Facilities for Learning</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        আমাদের স্কুলে রয়েছে আধুনিক সুযোগ-সুবিধা সম্পন্ন ক্লাসরুম এবং উন্নত প্রযুক্তির ল্যাব। এখানে আপনি সেরা পরিবেশে শিখতে পারবেন এবং আপনার দক্ষতা বৃদ্ধি করতে পারবেন।
-                    </p>
+    <!-- Work Place View Section -->
+    <section class="py-12 px-4 bg-gray-100">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="section-title mb-10">Work Place View</h2>
+            <div class="image-gallery-grid">
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/dJ2MDYz7/IMG-8650-2.jpg')">
+                    <img src="https://i.ibb.co/KzqhWv3m/IMG-8650-2.jpg" alt="Work Place View 1" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Work+1';">
                 </div>
-                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/6cC5G4Mn/7.png')">
-                    <img src="https://i.ibb.co/6cC5G4Mn/7.png" alt="বিজ্ঞাপন পোস্টার: আধুনিক শেখার সুবিধা">
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/BKB7sC25/IMG-8653-2.jpg')">
+                    <img src="https://i.ibb.co/3Yc8hCm9/IMG-8653-2.jpg" alt="Work Place View 2" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Work+2';">
                 </div>
-            </div>
-             <div class="image-section-content reverse-order mb-10">
-                <div class="text-content text-left md:order-2">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Career Opportunities Await</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        আমাদের প্রোগ্রাম আপনাকে শুধুমাত্র শিক্ষা দেয় না, বরং উজ্জ্বল ভবিষ্যতের জন্য প্রস্তুত করে। ডিপ্লোমা শেষে চাইনিজ ও আন্তর্জাতিক কোম্পানিতে চাকরির সুযোগ আপনার হাতের মুঠোয়।
-                    </p>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/cWVCb83/IMG-8656.jpg')">
+                    <img src="https://i.ibb.co/t0FxZ2K/IMG-8656.jpg" alt="Work Place View 3" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Work+3';">
                 </div>
-                <div class="image-wrapper md:order-1" onclick="openModal('https://i.ibb.co/fByZ4Gv/8.png')">
-                    <img src="https://i.ibb.co/fByZ4Gv/8.png" alt="বিজ্ঞাপন পোস্টার: ক্যারিয়ারের সুযোগ">
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/5PdP8Vs/IMG-8658-2.jpg')">
+                    <img src="https://i.ibb.co/rVgV6J5/IMG-8658-2.jpg" alt="Work Place View 4" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Work+4';">
                 </div>
-            </div>
-            <div class="image-section-content mb-10">
-                <div class="text-content text-left">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Global Exposure</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        চীনের বৈচিত্র্যময় সংস্কৃতি এবং আন্তর্জাতিক পরিবেশে নিজেকে মানিয়ে নিন। এটি আপনার ব্যক্তিগত এবং পেশাদার বিকাশে সহায়তা করবে, যা আপনাকে বিশ্ব নাগরিক হিসেবে গড়ে তুলবে।
-                    </p>
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/V06sp6Mk/IMG-8662-2.jpg')">
+                    <img src="https://i.ibb.co/KcnJznV8/IMG-8662-2.jpg" alt="Work Place View 5" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Work+5';">
                 </div>
-                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/4nsNL04m/9.png')">
-                    <img src="https://i.ibb.co/4nsNL04m/9.png" alt="বিজ্ঞাপন পোস্টার: গ্লোবাল এক্সপোজার">
-                </div>
-            </div>
-            <div class="image-section-content reverse-order">
-                <div class="text-content text-left md:order-2">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Seamless Transition to Bachelor's</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        ডিপ্লোমা শেষে সহজেই ব্যাচেলর প্রোগ্রামে ভর্তির সুযোগ পান। আমাদের প্রোগ্রামটি আপনার উচ্চশিক্ষার পথকে মসৃণ করে তোলে, যাতে আপনি আপনার একাডেমিক লক্ষ্য অর্জন করতে পারেন।
-                    </p>
-                </div>
-                <div class="image-wrapper md:order-1" onclick="openModal('https://i.ibb.co/4n1JgKWP/10.png')">
-                    <img src="https://i.ibb.co/4n1JgKWP/10.png" alt="বিজ্ঞাপন পোস্টার: ব্যাচেলর প্রোগ্রামে সহজ রূপান্তর">
+                <div class="image-wrapper" onclick="openModal('https://i.ibb.co/9CdtvqN/IMG-8665-2.jpg')">
+                    <img src="https://i.ibb.co/JMSQdzK/IMG-8665-2.jpg" alt="Work Place View 6" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Work+6';">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Lead Generation Form Section -->
-    <section id="lead-form" class="py-10 px-4 bg-blue-100">
+    <section id="lead-form" class="py-12 px-4 bg-blue-100">
         <div class="max-w-3xl mx-auto text-center card">
             <h2 class="section-title text-blue-800 mb-8">Book Your Free Call Today!</h2>
             <p class="text-lg text-gray-700 mb-6">
@@ -801,11 +836,11 @@
                 </div>
                 <div>
                     <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="আপনার ইমেইল ঠিকানা" required>
+                    <input type="email" id="email" name="email" placeholder="আপনার ইমেইল ঠিকানা" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                 </div>
                 <div>
                     <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone/WhatsApp Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="যেমন: +88017XXXXXXXX" required>
+                    <input type="tel" id="phone" name="phone" placeholder="যেমন: +88017XXXXXXXX" required pattern="^\+?[0-9\s\-\(\)]{7,20}$">
                 </div>
                 <div>
                     <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Your Message (Optional)</label>
@@ -819,7 +854,7 @@
     </section>
 
     <!-- EduExpress International Contact Section -->
-    <section id="edu-express-contact" class="py-10 px-4 bg-white">
+    <section id="edu-express-contact" class="py-12 px-4 bg-white">
         <div class="max-w-4xl mx-auto text-center card">
             <h2 class="section-title mb-8">Connect with EduExpress International</h2>
             <p class="text-lg text-gray-700 mb-6">
@@ -872,7 +907,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="max-w-6xl mx-auto text-center">
             <p class="text-lg mb-4">&copy; 2025 Guigang Peizheng Digital Vocational and Technical School, represented by EduExpress International.</p>
@@ -881,13 +916,13 @@
         </div>
     </footer>
 
-    <!-- Image Modal -->
+    <!-- Image Modal for full-size image view -->
     <div id="imageModal" class="modal">
         <span class="modal-close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
 
-    <!-- Success Message Modal -->
+    <!-- Success Message Modal for form submission -->
     <div id="successModal" class="success-modal">
         <div class="success-modal-content">
             <h3>অভিনন্দন!</h3>
@@ -897,55 +932,45 @@
     </div>
 
     <script>
-        // Image Modal functionality
+        // Get references to the image modal elements
         const imageModal = document.getElementById('imageModal');
         const modalImage = document.getElementById('modalImage');
 
+        /**
+         * Opens the image modal and displays the clicked image.
+         * @param {string} src - The source URL of the image to display.
+         */
         function openModal(src) {
-            modalImage.src = src;
-            imageModal.classList.add('show');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            modalImage.src = src; // Set the image source
+            imageModal.classList.add('show'); // Add 'show' class to make modal visible
+            document.body.style.overflow = 'hidden'; // Prevent scrolling on the body when modal is open
         }
 
+        /**
+         * Closes the image modal.
+         */
         function closeModal() {
-            imageModal.classList.remove('show');
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            imageModal.classList.remove('show'); // Remove 'show' class to hide modal
+            document.body.style.overflow = 'auto'; // Restore scrolling on the body
         }
 
-        // Close modal if clicked outside the image
+        // Close image modal if clicked outside the image content
         imageModal.addEventListener('click', function(event) {
             if (event.target === imageModal) {
                 closeModal();
             }
         });
 
-        // Form Submission Handling
+        // Get references to the contact form and success modal elements
         const contactForm = document.getElementById('contactForm');
         const successModal = document.getElementById('successModal');
 
+        // Event listener for form submission
         contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+            event.preventDefault(); // Prevent default form submission to handle it with JavaScript
 
             // In a real application, you would send the form data to your server here.
-            // Example using fetch (requires server-side script to process and send email):
-            /*
-            const formData = new FormData(contactForm);
-            fetch('YOUR_SERVER_ENDPOINT_FOR_EMAIL', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                showSuccessMessage();
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('ফর্ম জমা দিতে সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।');
-            });
-            */
-
-            // Simulate success for demonstration
+            // This is a simulated success for demonstration purposes.
             console.log('Form data would be sent now:', {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
@@ -953,18 +978,24 @@
                 message: document.getElementById('message').value
             });
 
-            showSuccessMessage();
-            contactForm.reset(); // Clear the form
+            showSuccessModal(); // Show the success message modal
+            contactForm.reset(); // Clear the form fields after submission
         });
 
+        /**
+         * Shows the success message modal.
+         */
         function showSuccessModal() {
-            successModal.classList.add('show');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            successModal.classList.add('show'); // Add 'show' class to make success modal visible
+            document.body.style.overflow = 'hidden'; // Prevent scrolling on the body
         }
 
+        /**
+         * Closes the success message modal.
+         */
         function closeSuccessModal() {
-            successModal.classList.remove('show');
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            successModal.classList.remove('show'); // Remove 'show' class to hide success modal
+            document.body.style.overflow = 'auto'; // Restore scrolling on the body
         }
 
         // Close success modal if clicked outside the content
