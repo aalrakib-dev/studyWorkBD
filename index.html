@@ -306,10 +306,22 @@
         /* Styling for image galleries */
         .image-gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for images */
+            grid-template-columns: repeat(1, minmax(280px, 1fr)); /* Default to 1 column on mobile */
             gap: 1.5rem; /* Spacing between images */
             padding: 1.5rem 0;
             justify-items: center;
+        }
+        /* Desktop view: 3 columns */
+        @media (min-width: 1024px) { /* Changed from md to lg for 3 columns on larger screens */
+            .image-gallery-grid {
+                grid-template-columns: repeat(3, minmax(280px, 1fr));
+            }
+        }
+        /* Tablet view: 2 columns */
+        @media (min-width: 768px) and (max-width: 1023px) { /* Added for explicit 2 columns on tablets */
+            .image-gallery-grid {
+                grid-template-columns: repeat(2, minmax(280px, 1fr));
+            }
         }
         .image-gallery-grid .image-wrapper {
             border-radius: 15px;
@@ -522,10 +534,10 @@
                         আবেদন জমা দেওয়ার মাত্র <strong>১ সপ্তাহের মধ্যে দ্রুত প্রাক-ভর্তি সিদ্ধান্ত</strong> সহ একটি সুবিন্যস্ত আবেদন প্রক্রিয়ার অভিজ্ঞতা নিন। একটি উত্তেজনাপূর্ণ শিক্ষামূলক যাত্রা শুরু করুন যা উচ্চ-মানের বৃত্তিমূলক প্রশিক্ষণকে ফলপ্রসূ বেতনভুক্ত কাজের সুযোগের সাথে নির্বিঘ্নে একত্রিত করে।
                     </p>
                 </div>
-                <!-- Image for About Section with responsiveness -->
+                <!-- Image for About Section with responsiveness and increased size -->
                 <div class="flex justify-center">
                     <div class="image-wrapper">
-                        <img src="https://i.ibb.co/0prQbcF8/2721753724313-pic.jpg" alt="বিজ্ঞাপন পোস্টার: শিক্ষার্থীদের চীনা জীবনযাত্রা" class="rounded-lg shadow-md w-full max-h-[300px] object-contain p-2">
+                        <img src="https://i.ibb.co/0prQbcF8/2721753724313-pic.jpg" alt="বিজ্ঞাপন পোস্টার: শিক্ষার্থীদের চীনা জীবনযাত্রা" class="rounded-lg shadow-md w-full max-h-[450px] object-contain p-2">
                     </div>
                 </div>
             </div>
@@ -546,84 +558,38 @@
         </div>
     </section>
 
-    <!-- Why Study in China Section: Benefits -->
-    <section class="py-12 px-4">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-10">Why Study in China?</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
-                <div class="card">
-                    <span class="benefit-icon">🎓</span>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">World-Class Education</h3>
-                    <p class="text-gray-600">চীনা বিশ্ববিদ্যালয়গুলো দ্রুত বিশ্ব র‍্যাঙ্কিংয়ে উপরে উঠছে।</p>
-                </div>
-                <div class="card">
-                    <span class="benefit-icon">💸</span>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Earn While You Learn</h3>
-                    <p class="text-gray-600">আপনার প্রোগ্রামের বেতন দিয়ে টিউশন ফি এবং জীবনযাত্রার সকল খরচ কভার করতে পারবেন!</p>
-                </div>
-                <div class="card">
-                    <span class="benefit-icon">🗣️</span>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">ম্যান্ডারিন শিখুন</h3>
-                    <p class="text-gray-600">বিশ্বব্যাপী ব্যবসায়িক ক্ষেত্রে একটি মূল্যবান দক্ষতা অর্জন করুন।</p>
-                </div>
-                <div class="card">
-                    <span class="benefit-icon">🏯</span>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">সমৃদ্ধ সাংস্কৃতিক ইতিহাস</h3>
-                    <p class="text-gray-600">একটি প্রাণবন্ত এবং প্রাচীন সংস্কৃতিতে নিজেকে নিমজ্জিত করুন।</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Majors Section: Available Programs -->
-    <section class="py-12 px-4 bg-gray-50">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="section-title mb-10">Cutting-Edge Majors</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="card">
-                    <span class="feature-icon mb-4">⚙️</span>
-                    <h3 class="text-xl font-bold text-gray-800">Mechanical & Electrical Technology (AMET)</h3>
-                    <p class="text-gray-600 mt-2">আধুনিক শিল্প প্রযুক্তির মূল বিষয়গুলি আয়ত্ত করুন।</p>
-                </div >
-                <div class="card">
-                    <span class="feature-icon mb-4">🧠</span>
-                    <h3 class="text-xl font-bold text-gray-800">Artificial Intelligence Technology Application (AoAI)</h3>
-                    <p class="text-gray-600 mt-2">এআই অ্যাপ্লিকেশনে দক্ষতা নিয়ে ভবিষ্যতের দিকে পা বাড়ান।</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Work Opportunities & Salary Section -->
     <section class="py-12 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-10 text-indigo-700">Work & Earn: Your Path to Financial Independence</h2>
-            <div class="grid md:grid-cols-2 gap-10 items-center">
-                <!-- Image for Work Opportunities Section with responsiveness -->
+            <div class="grid md:grid-cols-2 gap-10 items-center mb-8"> <!-- Added mb-8 for spacing before highlight box -->
+                <!-- Image for Work Opportunities Section with responsiveness and increased size -->
                 <div class="flex justify-center">
                     <div class="image-wrapper">
-                        <img src="https://i.ibb.co/X1R32hB/2711753724311-pic.jpg" alt="বিজ্ঞাপন পোস্টার: উচ্চ বেতনের কাজের সুযোগ" class="rounded-lg shadow-md w-full max-h-[300px] object-contain p-2">
+                        <img src="https://i.ibb.co/X1R32hB/2711753724311-pic.jpg" alt="বিজ্ঞাপন পোস্টার: উচ্চ বেতনের কাজের সুযোগ" class="rounded-lg shadow-md w-full max-h-[450px] object-contain p-2">
                     </div>
                 </div>
+                <!-- Text content for Work Opportunities Section -->
                 <div>
                     <p class="text-lg text-gray-700 leading-relaxed mb-4 text-left">
                         আমাদের প্রোগ্রামটি ব্যাপক ব্যবহারিক কাজের অভিজ্ঞতাকে অনন্যভাবে একত্রিত করে। শিক্ষার্থীরা প্রধানত মোবাইল ফোন ফ্যাক্টরি এবং অনুরূপ শিল্পে <strong>প্রতিদিন ৮ ঘণ্টা, সপ্তাহে ৬ দিন</strong> বেতনভুক্ত কাজ করে। এটি কেবল একটি চাকরি নয়; এটি আপনার শেখার একটি গুরুত্বপূর্ণ অংশ, যা আপনাকে তাৎক্ষণিক কর্মজীবনের সাফল্যের জন্য প্রস্তুত করে।
                     </p>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4 text-left">
+                    <p class="text-lg text-gray-700 leading-relaxed text-left">
                         আপনি কোয়ালিটি কন্ট্রোল, ইলেকট্রিক্যাল ওয়্যারিং, প্রোডাক্ট প্যাকেজিং এবং অ্যাসেম্বলি লাইন ওয়ার্কের মতো গুরুত্বপূর্ণ পদে হাতে-কলমে দক্ষতা অর্জন করবেন। এই নিমজ্জিত অভিজ্ঞতা নিশ্চিত করে যে আপনি একটি শক্তিশালী জীবনবৃত্তান্ত এবং ব্যবহারিক দক্ষতা নিয়ে স্নাতক হবেন।
                     </p>
-                    <div class="highlight-box mt-4">
-                        <p class="text-2xl font-extrabold text-indigo-700 mb-2">
-                            Exceptional Earning Potential:
-                        </p>
-                        <p class="text-4xl font-extrabold text-green-600 leading-tight">
-                            ¥3,500 to ¥4,500 RMB/মাস <span class="text-xl font-semibold text-gray-600">(Performance-based Salary)</span>
-                        </p>
-                        <p class="text-lg text-gray-700 mt-2">
-                            প্রতি সেমিস্টারে <strong>৪ থেকে ৫ মাস বেতনভুক্ত কাজ</strong> করুন, যা আপনার জীবনযাত্রার এবং অধ্যয়নের খরচ উল্লেখযোগ্যভাবে পূরণ করতে পারে।
-                        </p>
-                    </div>
                 </div>
+            </div>
+            <!-- Highlight box for earning potential, now full width -->
+            <div class="highlight-box mt-4 mx-auto w-full max-w-4xl">
+                <p class="text-2xl font-extrabold text-indigo-700 mb-2">
+                    Exceptional Earning Potential:
+                </p>
+                <p class="text-4xl font-extrabold text-green-600 leading-tight">
+                    ¥3,500 to ¥4,500 RMB/মাস <span class="text-xl font-semibold text-gray-600">(Performance-based Salary)</span>
+                </p>
+                <p class="text-lg text-gray-700 mt-2">
+                    প্রতি সেমিস্টারে <strong>৪ থেকে ৫ মাস বেতনভুক্ত কাজ</strong> করুন, যা আপনার জীবনযাত্রার এবং অধ্যয়নের খরচ উল্লেখযোগ্যভাবে পূরণ করতে পারে।
+                </p>
             </div>
         </div>
     </section>
@@ -734,9 +700,9 @@
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-10">Campus and Classroom View</h2>
             <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
-                এখানে আপনি দেখতে পাবেন আমাদের আধুনিক ক্যাম্পাস এবং সুসজ্জিত ক্লাসরুমের ছবি, যেখানে শিক্ষার্থীরা সেরা পরিবেশে শিক্ষা গ্রহণ করে।
+                এখানে আপনি আমাদের আধুনিক ক্যাম্পাস এবং সুসজ্জিত ক্লাসরুমের ছবি দেখতে পাবেন, যেখানে শিক্ষার্থীরা সেরা পরিবেশে শিক্ষা গ্রহণ করে।
             </p>
-            <div class="image-gallery-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="image-gallery-grid">
                 <div class="image-wrapper" onclick="openModal('https://i.ibb.co/5g1mHr58/IMG-4116.jpg')">
                     <img src="https://i.ibb.co/5g1mHr58/IMG-4116.jpg" alt="Campus View 1" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Campus+1';">
                 </div>
@@ -759,14 +725,14 @@
         </div>
     </section>
 
-    <!-- Accommodation Place Section (formerly Hostel View) -->
+    <!-- Accommodation Place Section -->
     <section class="py-12 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-10">Accommodation Place</h2>
             <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
-                এখানে আপনি দেখতে পাবেন আমাদের শিক্ষার্থীদের জন্য আরামদায়ক এবং নিরাপদ আবাসন ব্যবস্থার ছবি, যা আপনার পড়াশোনার পরিবেশকে আরও উন্নত করবে।
+                এখানে আপনি আমাদের শিক্ষার্থীদের জন্য আরামদায়ক এবং নিরাপদ আবাসন ব্যবস্থার ছবি দেখতে পাবেন, যা আপনার পড়াশোনার পরিবেশকে আরও উন্নত করবে।
             </p>
-            <div class="image-gallery-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="image-gallery-grid">
                 <div class="image-wrapper" onclick="openModal('https://i.ibb.co/k2DJ4FWR/2851752748193-pic-768x576.jpg')">
                     <img src="https://i.ibb.co/Swmctp9h/2851752748193-pic-768x576.jpg" alt="Hostel View 1" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Hostel+1';">
                 </div>
@@ -794,9 +760,9 @@
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="section-title mb-10">Work Place View</h2>
             <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
-                এখানে আপনি দেখতে পাবেন আমাদের শিক্ষার্থীদের কাজের পরিবেশের ছবি, যেখানে তারা ব্যবহারিক দক্ষতা অর্জন করে এবং মূল্যবান কর্ম অভিজ্ঞতা লাভ করে।
+                এখানে আপনি আমাদের শিক্ষার্থীদের কাজের পরিবেশের ছবি দেখতে পাবেন, যেখানে তারা ব্যবহারিক দক্ষতা অর্জন করে এবং মূল্যবান কর্ম অভিজ্ঞতা লাভ করে।
             </p>
-            <div class="image-gallery-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="image-gallery-grid">
                 <div class="image-wrapper" onclick="openModal('https://i.ibb.co/dJ2MDYz7/IMG-8650-2.jpg')">
                     <img src="https://i.ibb.co/KzqhWv3m/IMG-8650-2.jpg" alt="Work Place View 1" onerror="this.onerror=null;this.src='https://placehold.co/280x250/e0f2fe/003366?text=Work+1';">
                 </div>
@@ -908,7 +874,7 @@
     <footer class="footer">
         <div class="max-w-6xl mx-auto text-center">
             <p class="text-lg mb-4">&copy; 2025 Guigang Peizheng Digital Vocational and Technical School, represented by EduExpress International.</p>
-            <p class="text-md mb-2">অবস্থান: Guigang City, Guangxi Province, China</p>
+            <p class="text-md mb-2">College Address: Guigang City, Guangxi Province, China</p>
             <p class="text-md">EduExpress International অফিস: House: 12/1, Ground Floor, Road: 4/A, Dhanmondi, Dhaka - 1209</p>
         </div>
     </footer>
