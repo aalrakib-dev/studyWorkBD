@@ -820,7 +820,8 @@
             <p class="text-lg text-gray-700 mb-6">
                 নিচের ফর্মটি পূরণ করুন এবং EduExpress International-এর একজন প্রতিনিধি দ্রুত আপনার সাথে যোগাযোগ করবে পরবর্তী পদক্ষেপগুলির জন্য।
             </p>
-            <form id="contactForm" action="#" method="POST" class="space-y-4 text-left">
+            <!-- Form updated to use Formsubmit.co -->
+            <form id="contactForm" action="https://formsubmit.co/eduexpress.office@gmail.com" method="POST" class="space-y-4 text-left">
                 <div>
                     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="আপনার পুরো নাম" required>
@@ -840,6 +841,10 @@
                 <div class="text-center pt-4">
                     <button type="submit" class="btn-primary">Book Free Consultation Today!</button>
                 </div>
+                <!-- Hidden input for Formsubmit.co redirect after success -->
+                <input type="hidden" name="_next" value="https://eduexpressint.com/"> <!-- Replace with your actual thank you page URL -->
+                <!-- Hidden input for Formsubmit.co subject line -->
+                <input type="hidden" name="_subject" value="New Contact from EduExpress Landing Page">
             </form>
         </div>
     </section>
@@ -855,7 +860,7 @@
                 <div class="contact-item">
                     <p class="text-xl font-semibold text-gray-800 mb-2">📞 Phone</p>
                     <a href="tel:+8801983333566" class="text-indigo-600 hover:underline text-lg">+880 1983-333566</a>
-                    <a href="tel:+8801329663505" class="text-indigo-600 hover:underline text-lg">+880 1329-663505</a>
+                    <a href="tel:++8801329663505" class="text-indigo-600 hover:underline text-lg">+880 1329-663505</a>
                 </div>
                 <div class="contact-item">
                     <p class="text-xl font-semibold text-gray-800 mb-2">📱 WhatsApp</p>
@@ -956,21 +961,28 @@
         const contactForm = document.getElementById('contactForm');
         const successModal = document.getElementById('successModal');
 
-        // Event listener for form submission
+        // Formsubmit.co handles the submission directly, so we can remove the fetch API call.
+        // We'll keep the success modal for visual feedback, but it won't be triggered by fetch success.
+        // Instead, Formsubmit.co will redirect to a success page.
+        // For a seamless experience, you'll need to create a simple 'thank-you.html' page.
+
         contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission to handle it with JavaScript
+            // Formsubmit.co handles the submission, so we don't need to prevent default
+            // or use JavaScript for sending the email.
+            // The hidden input fields in the form will handle the redirect and subject.
 
-            // In a real application, you would send the form data to your server here.
-            // This is a simulated success for demonstration purposes.
-            console.log('Form data would be sent now:', {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                message: document.getElementById('message').value
-            });
+            // Simulate success for local testing or if you want to show the modal
+            // before Formsubmit.co redirects.
+            // For production, Formsubmit.co will handle the redirect.
+            // If you want to show this modal AND redirect, you might need a slight delay
+            // or modify Formsubmit.co's redirect behavior.
+            // For simplicity, we'll let Formsubmit.co handle the redirect.
+            // The success modal in this HTML will primarily be for initial visual feedback
+            // if you remove the _next hidden input, or for custom handling.
 
-            showSuccessModal(); // Show the success message modal
-            contactForm.reset(); // Clear the form fields after submission
+            // If you want to show the modal and then let Formsubmit.co redirect,
+            // you might need to use a timeout or remove the _next hidden input.
+            // For now, Formsubmit.co's default redirect will take precedence.
         });
 
         /**
